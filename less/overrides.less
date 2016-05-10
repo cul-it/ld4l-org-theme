@@ -108,6 +108,17 @@ body {
   }
 }
 
+//Dropdown in navbar-inverse. 
+//.dropdown-menu > .active > a, 
+//.dropdown-menu > .active > a:hover, 
+//.dropdown-menu > .active > a:focus {
+//    background-color: #6f1b12 !important;
+//}
+//.dropdown-menu > li > a:hover, 
+//.dropdown-menu > li > a:focus {
+//    background-color: #6f1b12 !important;
+//}
+
 // Adjust z-index of core components.
 #overlay-container,
 .overlay-modal-background,
@@ -196,9 +207,13 @@ form#search-block-form {
 .navbar #block-search-form {
   float: none;
   margin: 8px 0 5px 5px;
-  width: 200px;
+  @media @tablet {
+    width: 100%;
+  }
   @media @normal {
+    display: inline-block;
     float: right;
+    width: 200px;
   }
 }
 .navbar-search .control-group {
