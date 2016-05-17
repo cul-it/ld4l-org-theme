@@ -107,17 +107,29 @@ body {
     width: auto;
   }
 }
+.navbar-nav {
+  margin-top: 58px;
+}
+.navbar-nav > li > a {
+  color: #fff;
+  &:hover, &:focus, &:active {
+    background-color: transparent;
+    color: #aee2ff;
+  }
+}
 
 //Dropdown in navbar-inverse. 
-//.dropdown-menu > .active > a, 
-//.dropdown-menu > .active > a:hover, 
-//.dropdown-menu > .active > a:focus {
-//    background-color: #6f1b12 !important;
-//}
-//.dropdown-menu > li > a:hover, 
-//.dropdown-menu > li > a:focus {
-//    background-color: #6f1b12 !important;
-//}
+.navbar-nav > li > .dropdown-menu {
+  background-color: #3e4f64; //slightly lighter than header background-color 
+  a {
+    color: #fff;
+    &:hover, &:focus {
+      background-color: #aee2ff;
+      color: #000;
+    }
+  } 
+}
+
 
 // Adjust z-index of core components.
 #overlay-container,
@@ -201,7 +213,7 @@ p:last-child {
 }
 
 // Search form.
-form#search-block-form {
+/*form#search-block-form {
   margin: 0;
 }
 .navbar #block-search-form {
@@ -215,10 +227,10 @@ form#search-block-form {
     float: right;
     width: 200px;
   }
-}
-.navbar-search .control-group {
+}*/
+/*.navbar-search .control-group {
   margin-bottom:0px;
-}
+}*/
 /*.navbar .btn {
   line-height: 1.4;
 }*/
