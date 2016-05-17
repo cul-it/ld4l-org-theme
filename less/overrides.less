@@ -110,12 +110,21 @@ body {
 .navbar-nav {
   margin-top: 58px;
 }
-.navbar-nav > li > a {
+.navbar-inverse .navbar-nav > li > a {
   color: #fff;
-  &:hover, &:focus, &:active {
-    background-color: transparent;
-    color: #aee2ff;
-  }
+}
+.navbar-inverse .navbar-nav > .open > a, 
+.navbar-inverse .navbar-nav > .open > a:hover, 
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background-color: transparent !important;
+  color: #aee2ff !important;
+}
+
+.navbar-inverse .navbar-nav > .open > a .caret, 
+.navbar-inverse .navbar-nav > .open > a:hover .caret, 
+.navbar-inverse .navbar-nav > .open > a:focus .caret {
+  border-bottom-color: #aee2ff !important;
+  border-top-color: #aee2ff !important;
 }
 
 //Dropdown in navbar-inverse. 
@@ -125,9 +134,17 @@ body {
     color: #fff;
     &:hover, &:focus {
       background-color: #aee2ff;
-      color: #000;
+      color: #0d4c70;
     }
   } 
+  > .active > a {
+    background-color: #aee2ff;
+    color: #0d4c70;
+  }
+}
+
+.nav > li > a.active {
+  background-color: @gray-lighter;
 }
 
 
