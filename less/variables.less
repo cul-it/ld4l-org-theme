@@ -10,13 +10,13 @@
 
 @ps-text:         #333333; //gray
 @ps-nav-bg:       #303d4d; //dark-red
-@ps-link-text:    #157ab5; //blue
+@ps-link-text:    #6f1b12; //dark-red
 @ps-nav-text:     #EEEEEE; //gray
 @ps-well-bg:      #D0EB55; //yellow
-@ps-jumbotron-bg: #aee2ff; //blue
+@ps-jumbotron-bg: #C7DFE3; //blue
 @ps-bg:           #FFFFFF; //white
 
-@blue-4-bg:          #d9eae8; //pale blue like the "4" in LD4L
+@blue-4-bg:       #d9eae8; //pale blue like the "4" in LD4L
 
 
 //== Colors
@@ -29,7 +29,7 @@
 @gray-light:             lighten(#000, 46.7%); // #777
 @gray-lighter:           lighten(#000, 95%); // #eee
 
-@brand-primary:         #326D99;
+@brand-primary:         #6f1b12;
 @brand-success:         #5cb85c;
 @brand-info:            #5bc0de;
 @brand-warning:         #f0ad4e;
@@ -165,8 +165,8 @@
 @btn-default-bg:                 #fff;
 @btn-default-border:             #ccc;
 
-@btn-primary-color:              contrast(@brand-primary, black, white);
-@btn-primary-bg:                 @brand-primary;
+@btn-primary-color:              @brand-primary;
+@btn-primary-bg:                 #fff
 @btn-primary-border:             darken(@btn-primary-bg, 5%);
 
 @btn-success-color:              #fff;
@@ -861,6 +861,6 @@
 //** Width of horizontal description list titles
 @dl-horizontal-offset:        @component-offset-horizontal;
 //** Horizontal line color.
-@hr-border:                   @ps-jumbotron-bg;
+@hr-border:                   @gray-lighter;
 
 

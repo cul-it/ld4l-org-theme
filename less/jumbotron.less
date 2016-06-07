@@ -8,9 +8,9 @@
   margin-bottom: @jumbotron-padding;
   color: @jumbotron-color;
   background-color: @jumbotron-bg;
-
+  min-height: 250px;
   h1,
-  .h1 {
+  .h1, h2, .h2 {
     color: @jumbotron-heading-color;
   }
   p {
@@ -20,7 +20,8 @@
   }
 
   .container & {
-    border-radius: 0; // Only round corners at higher resolutions if contained in a container
+    border-radius: 2px 2px 50px; 
+    box-shadow: 1px 1px 1px 0 #ccc;
   }
 
   .container {
