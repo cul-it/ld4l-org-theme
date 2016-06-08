@@ -22,6 +22,7 @@ regions[page_bottom]    = 'Page bottom'
 regions[home_tile_1]    = 'Home (front) Tile 1'
 regions[home_tile_2]    = 'Home (front) Tile 2'
 regions[home_tile_3]    = 'Home (front) Tile 3'
+regions[navigation]     = 'Navigation'
 
 
 ;;;;;;;;;;;;;;;;;;;;;
