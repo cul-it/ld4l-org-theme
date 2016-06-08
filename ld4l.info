@@ -8,7 +8,7 @@ base theme = bootstrap
 ;; Regions
 ;;;;;;;;;;;;;;;;;;;;;
 
-regions[navigation]     = 'Navigation'
+
 regions[header]         = 'Top Bar'
 regions[highlighted]    = 'Highlighted'
 regions[help]           = 'Help'
@@ -19,7 +19,9 @@ regions[footer_left]    = 'Footer Left'
 regions[footer_right]   = 'Footer Right'
 regions[page_top]       = 'Page top'
 regions[page_bottom]    = 'Page bottom'
-regions[search_nav]     = 'Search In NavBar'
+regions[home_tile_1]    = 'Home (front) Tile 1'
+regions[home_tile_2]    = 'Home (front) Tile 2'
+regions[home_tile_3]    = 'Home (front) Tile 3'
 
 
 ;;;;;;;;;;;;;;;;;;;;;

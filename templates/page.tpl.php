@@ -74,48 +74,48 @@
  * @ingroup themeable
  */
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+
+<header role="banner" class="<?php print $navbar_classes; ?>">
   <div class="container">
-    <div class="navbar-header">
-      <?php if ($logo): ?>
+    <?php if ($logo): ?>
       <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
         <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" />
       </a>
       <?php endif; ?>
 
-      <?php if (!empty($site_name)): ?>
-      <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
-
-      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse navbar-right">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-          <?php if (!empty($search_nav)): ?>
-            <?php print render($search_nav); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
+    <?php if (!empty($site_name)): ?>
+      <a class="name navbar-brand pull-right" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
     <?php endif; ?>
+  </div>
+</header>
 
+<header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+  <div class="container">
+    <?php if (!$is_front): ?>
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+    
+      <?php if (!empty($primary_nav) || !empty($secondary_nav)): ?>
 
+        <div class="navbar-collapse collapse navbar-right">
+          <nav role="navigation">
+            <?php if (!empty($primary_nav)): ?>
+              <?php print render($primary_nav); ?>
+            <?php endif; ?>
+            <?php if (!empty($secondary_nav)): ?>
+              <?php print render($secondary_nav); ?>
+            <?php endif; ?>
+          </nav>
+        </div>
+      <?php endif; ?>
+    <?php endif; ?>
   </div>
 </header>
 
@@ -128,6 +128,33 @@
 
     <?php print render($page['header']); ?>
   </header> <!-- /#page-header -->
+
+  <?php if ($is_front): ?>
+    <div class="row">
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <?php if (!empty($home_tile_1)): ?>
+            <?php print render($home_tile_1); ?>
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <?php if (!empty($home_tile_2)): ?>
+            <?php print render($home_tile_2); ?>
+          <?php endif; ?>
+        </div>
+      </div>
+      <div class="col-sm-4">
+        <div class="jumbotron">
+          <?php if (!empty($home_tile_3)): ?>
+            <?php print render($home_tile_3); ?>
+          <?php endif; ?>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
+
 
   <div class="row">
 
