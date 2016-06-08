@@ -63,6 +63,7 @@
  * - $page['header']: Items for the header region.
  * - $page['footer_right']: Items for the footer region.
  * - $page['footer_left']: Items for the footer region.
+* - $page['footer_left']: Items for the footer region.
  *
  * @see bootstrap_preprocess_page()
  * @see template_preprocess()
@@ -90,18 +91,20 @@
 </header>
 
 <?php if (!$is_front): ?>
-  <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
-    <div class="container">
-      <div class="navbar-header">
-        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+  <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
+    <header id="navbar" role="banner" class="<?php print $navbar_classes; ?>">
+      <div class="container">
+      
+        <div class="navbar-header">
+          <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        
         <div class="navbar-collapse collapse navbar-right">
           <nav role="navigation">
             <?php if (!empty($primary_nav)): ?>
@@ -115,9 +118,10 @@
             <?php endif; ?>
           </nav>
         </div>
-      <?php endif; ?>
-    </div>
-  </header>
+
+      </div>
+    </header>
+  <?php endif; ?>
 <?php endif; ?>
 
 <div class="main-container container">
@@ -134,21 +138,21 @@
     <div class="row">
       <div class="col-sm-4">
         <div class="jumbotron">
-          <?php if (!empty($home_tile_1)): ?>
+          <?php if (!empty($page['home_tile_1'])): ?>
             <?php print render($page['home_tile_1']); ?>
           <?php endif; ?>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="jumbotron">
-          <?php if (!empty($home_tile_2)): ?>
+          <?php if (!empty($page['home_tile_2'])): ?>
             <?php print render($page['home_tile_2']); ?>
           <?php endif; ?>
         </div>
       </div>
       <div class="col-sm-4">
         <div class="jumbotron">
-          <?php if (!empty($home_tile_3)): ?>
+          <?php if (!empty($page['home_tile_3'])): ?>
             <?php print render($page['home_tile_3']); ?>
           <?php endif; ?>
         </div>
