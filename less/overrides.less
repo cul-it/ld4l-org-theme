@@ -28,6 +28,7 @@ html {
     }
   }
 }
+
 body {
   // Fix horizontal scrolling on iOS devices.
   // http://drupal.org/node/1870076
@@ -128,9 +129,10 @@ body {
 .navbar .slogan.navbar-brand {
   font-family: @font-family-sans-serif;
   font-size: 2.5em;
-  padding: 1em;
-  line-height: 2em;
   text-transform: uppercase;
+  @media (min-width: @screen-sm-min) {
+    float: right !important;
+  }
 }
 
 //Dropdown in navbar-inverse. 
@@ -703,3 +705,5 @@ table {
 .alert-danger a {
   color: darken(@alert-danger-text, 10%);
 }
+
+

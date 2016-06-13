@@ -89,7 +89,7 @@
     <?php endif; ?>
 
     <?php if (!empty($site_slogan)): ?>
-      <span class="slogan navbar-brand pull-right"><?php print $site_slogan; ?></span>
+      <span class="slogan navbar-brand"><?php print $site_slogan; ?></span>
     <?php endif; ?>
 
   </div>
